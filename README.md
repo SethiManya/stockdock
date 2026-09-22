@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StockDock
+### Storefront prototype · Next.js · React · Firebase
 
-## Getting Started
+StockDock is a team-built storefront prototype for browsing products and exploring a store interface. This is **Manya Sethi's portfolio fork** of [JoltedGeo/StockDockPrototype](https://github.com/JoltedGeo/StockDockPrototype), with the original commit history and contributor credit preserved.
 
-First, run the development server:
+## My contribution
+
+I worked on the product discovery experience:
+
+- Built product-name and category search over a sample catalogue.
+- Redesigned the homepage with a hero section, product cards, category sections, and responsive layouts.
+- Connected the Products navigation to the search page.
+- Added a Firestore export to the existing Firebase setup.
+
+[View my implementation commit](https://github.com/JoltedGeo/StockDockPrototype/commit/24495bc570186d99436ea611251441c18dc09036)
+
+| Area | Code |
+| --- | --- |
+| Product search | [app/search/page.js](app/search/page.js) |
+| Homepage | [app/page.js](app/page.js) |
+| Navigation | [app/components/Header.js](app/components/Header.js) |
+| Firebase initialization | [app/utils/firebase.js](app/utils/firebase.js) |
+
+The complete application is a team project. The features listed above describe my individual contribution.
+
+## Technology
+
+Next.js 16 · React 19 · JavaScript · Tailwind CSS · Firebase Authentication · Firestore
+
+## Run locally
+
+Use a Node.js version supported by Next.js 16 and npm.
+
+```bash
+git clone https://github.com/SethiManya/stockdock.git
+cd stockdock
+npm install
+```
+
+Create `.env.local` in the project root and fill these variables with the web-app configuration from **your own Firebase project**:
+
+```dotenv
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
+```
+
+Configure the Firebase sign-in providers you intend to use, then start the app:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Development checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+These are the repository's available check commands; this documentation update does not certify a passing build or lint result.
 
-To learn more about Next.js, take a look at the following resources:
+## Prototype scope
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Product discovery was implemented against sample product data. This repository is presented as a learning and portfolio prototype, not a production commerce service. Authentication and other Firebase-backed behaviour require your Firebase configuration.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credits
 
-## Deploy on Vercel
+Original team repository: [JoltedGeo/StockDockPrototype](https://github.com/JoltedGeo/StockDockPrototype). Original authorship is retained in the Git history.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Portfolio contributor: **[Manya Sethi](https://github.com/SethiManya)**.
